@@ -1,0 +1,179 @@
+body {
+	margin: 0;
+    font-family: Verdana, Geneva;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    font-size: 14px;
+    background-color: #1D2127;
+	color:white;
+}
+
+body img {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+	text-decoration: none;
+    color: gray;
+}
+
+.wrapper {
+    max-width: 1100px;
+    min-width: 675px;
+    margin: 0 auto;
+}
+
+.errormessage {
+	text-align: center;
+}
+div.clientName {
+  display:inline-block;
+  width: 400px;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+div.clientInfoContainer {
+	display:inline-block;
+}
+
+div.clientInfo {
+  display:inline-block;
+  vertical-align:top;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+div.clientAddress {
+  display:inline-block;
+  padding-left:5px;
+  padding-right:5px;
+  width: 250px;
+}
+
+div.clientContactInfo {
+	display:inline-block;
+	vertical-align:top;
+  padding-left:5px;
+  padding-right:5px;
+  width: 250px;
+}
+
+div.clientInstructions {
+	display:inline-block;
+  padding-left:5px;
+  padding-right:5px;
+  width: 250px;
+}
+
+div.viewClient {
+  display:inline-block;
+  padding-right:5px;
+}
+
+div.addJob {
+  display:inline-block;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+div.addContact {
+  display:inline-block;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+div.viewContacts {
+  display:inline-block;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+div.viewJobs {
+  display:inline-block;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+div.contactContainer {
+  display:inline-block;
+  padding-left:5px;
+  padding-right:5px;
+  vertical-align:top;
+}
+
+div.contactInfo {
+  display:inline-block;
+}
+
+div.contactInstructions {
+  display:inline-block;
+  vertical-align: top;
+  padding-left:5px;
+  padding-right:5px;
+  
+}
+
+div.jobInfoContainer {
+	display:inline-block;
+}
+
+div.jobInfo {
+	display:inline-block;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+div.navLogo {
+	display:inline-block;
+	padding-top: 15px;
+}
+
+.navbarcontainer {
+    width: 100%;
+    text-align:left;
+	border-top: 5px solid #2E353E;
+    border-bottom: 1px solid #2E353E;
+}
+
+.navbar {
+    margin: 0 auto;
+	display:inline-block;
+}
+.tr-drop {
+	display:inline-block;
+    vertical-align: bottom;
+}

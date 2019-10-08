@@ -1,0 +1,51 @@
+extends layout.pug
+append body
+  div.enterJobContainer
+    - var values = jobInfo;
+    - var settings = settings1;
+    form(action='/job/add', method='POST')
+      div.input
+        input(type="hidden", name="client_id", value=clientId)
+        span.label Client Invoice
+        input(type="text", name="invoice")
+      div.input
+        span.label Job Type
+        input(type="text", name="job_type")
+      div.input
+        span.label Equipment Disposition
+        input(type="text", name="equipment_disposition_type")
+      div.input
+        span.label Date
+        input(type="text", name="date") 
+      div.input
+        span.label Vehicle
+        input(type="text", name="vehicle") 
+      div.input
+        span.label Driver
+        input(type="text", name="driver")
+      div.input
+        span.label Driver Notes
+        input(type="text", name="driver_notes")
+      div.input
+        span.label Driver Equipment
+        input(type="text", name="driver_equipment")
+      div.input
+        span.label Expected Materials
+        input(type="text", name="expected_materials")
+      div.input
+        span.label Data Destruction Type
+        input(type="text", name="data_destruction_type")
+      div.input
+        span.label Data Destruction Notes
+        input(type="text", name="data_destruction_notes")
+      div.input
+        span.label Weight
+        input(type="text", name="weight")
+      div.input
+        span.label Actual Materials
+        input(type="text", name="actual_materials")
+      div.input
+        span.label Status
+        input(type="text", name="status")
+      div.actions
+        input(type="submit", value="Add Job")

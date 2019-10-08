@@ -1,0 +1,128 @@
+- var values = invoice2;
+- var settings = settings1;
+doctype html
+head
+  title Techno Rescue Internal Services
+  link(rel='stylesheet', href='css/main.css')
+  block head
+body
+  block add_client
+    form(name="input_client", method="post")
+      div.input
+        span.label Business Name
+        input(type="text", name="name")
+      div.input
+        span.label Business Address
+        input(type="text", name="address") 
+      div.input
+        span.label Business Phone
+        input(type="text", name="phone")
+      div.input
+        span.label Business Email
+        input(type="text", name="name")
+      div.input
+        span.label On Site Instructions
+        input(type="text", name="instructions")
+      div.actions
+        input(type="submit", value="Add Client")
+  br
+  br
+  br
+  block add_contact
+    form(name="input_contact", method="post")
+      div.input
+        span.label Business
+        select(name='invoice')
+          each invoice in values
+            option(value = invoice.invoice) #{invoice.invoice} - #{invoice.client.name}
+      div.input
+        span.label Contact Name
+        input(type="text", name="name")
+      div.input
+        span.label Business Address
+        input(type="text", name="address") 
+      div.input
+        span.label Business Phone
+        input(type="text", name="phone")
+      div.input
+        span.label Business Email
+        input(type="text", name="name")
+      div.input
+        span.label On Site Instructions
+        input(type="text", name="instructions")
+      div.actions
+        input(type="submit", value="Add Contact")
+  br
+  br
+  br
+  block data_destruction
+    form(name="input_data_destruction", method="post")
+      div.input
+        span.label Invoice
+        select(name='invoice')
+          each invoice in values
+            option(value = invoice.invoice) #{invoice.invoice} - #{invoice.client.name}
+      div.input
+        span.label Device Serial
+        input(type="text", name="serial")
+      div.input
+        span.label Destruction Method
+        select(name='method')
+          each value in settings
+            option(value = value.setting_value) #{value.value}
+      div.input
+        span.label Destruction Status
+        input(type="text", name="status")
+      div.input
+        span.label Destruction Notes
+        input(type="text", name="notes")
+      div.actions
+        input(type="submit", value="Add Data Destruction")
+  br
+  br
+  br
+  block input_quarantine
+    form(name="input_quarantine", method="post")
+      div.input
+        span.label Quarantine Invoice
+        select(name='invoice')
+          each invoice in values
+            option(value = invoice.invoice) #{invoice.invoice} - #{invoice.client.name}
+      div.input
+        span.label Material Type
+        input(type="text", name="type")
+      div.input
+        span.label Material Size
+        input(type="text", name="size")
+      div.input
+        span.label Material Status
+        input(type="text", name="status")
+      div.input
+        span.label Material Notes
+        input(type="text", name="notes")
+      div.actions
+        input(type="submit", value="Add Quarantine")
+  br
+  br
+  br
+  block input_universal_waste
+    form(name="input_universal_waste", method="post")
+      div.input
+        span.label Universal Waste Invoice
+        select(name='invoice')
+          each invoice in values
+            option(value = invoice.invoice) #{invoice.invoice} - #{invoice.client.name}
+      div.input
+        span.label Material Type
+        input(type="text", name="type")
+      div.input
+        span.label Material Size
+        input(type="text", name="size")
+      div.input
+        span.label Material Status
+        input(type="text", name="status")
+      div.input
+        span.label Material Notes
+        input(type="text", name="notes")
+      div.actions
+        input(type="submit", value="Add Universal Waste")

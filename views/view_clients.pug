@@ -1,0 +1,17 @@
+extends layout.pug
+append body
+  - var values = clients;
+  each client in values
+    div.clientName
+      p= client.name
+    div.viewClient
+      form(action='/client/view/' + client.client_id, method='POST')
+        input(type='hidden', name='clientId' value=client.client_id)
+        input(class='btn btn-secondary' type='submit', value='View')
+    div.addJob
+      form(action'/job/add', method='POST')
+        input(type='hidden', name='clientId' value=client.client_id)
+        input(class='btn btn-secondary' type='submit', value='Add Job')
+    br
+  else
+    p No Clients Entered

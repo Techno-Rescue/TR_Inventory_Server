@@ -1,0 +1,32 @@
+extends layout.pug
+append body
+  div.enterClientContainer
+    - var values = invoice2;
+    - var settings = settings1;
+    form(action='/client/add', method='POST')
+      div.input
+        span.label Business Name
+        input(type="text", name="name")
+      div.input
+        span.label Business Address
+        input(type="text", name="address")
+      div.input
+        span.label Business City
+        input(type="text", name="city")
+      div.input
+        span.label Business State
+        input(type="text", name="state") 
+      div.input
+        span.label Business Zip
+        input(type="text", name="zip") 
+      div.input
+        span.label Business Phone
+        input(type="text", name="phone")
+      div.input
+        span.label Business Email
+        input(type="text", name="email")
+      div.input
+        span.label On Site Instructions
+        input(type="text", name="instructions")
+      div.actions
+        input(type="submit", value="Add Client")

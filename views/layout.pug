@@ -1,0 +1,28 @@
+- var values = errors
+html
+  head
+    block head
+      title Techno Rescue Internal Services
+    block scripts
+      script(src="/js/jquery.js")
+      script(src="/js/bootstrap.js")
+      link(rel="stylesheet", href="/css/bootstrap.css")
+      link(href='/css/main.css', rel='stylesheet')
+      link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  body
+    div.wrapper
+      div.navbarContainer
+        div.navbar
+          div.navLogo
+            img(src='/img/logo.png' height='75')
+          div(class='dropdown tr-drop')
+            button(class='btn btn-tr-custom1 dropdown-toggle' type='button' id='clientDropdownMenu' data-toggle='dropdown' data-target='#clientDropdown' aria-haspopup='true' aria-expanded='false') Clients
+            div(class='dropdown-menu' aria-labelledby='clientDropdown')
+              a(class='dropdown-item' href='/client/view') View Clients
+              a(class='dropdown-item' href='/client/add') Add Client
+          div(class='dropdown tr-drop')
+            button(class='btn btn-tr-custom1 dropdown-toggle' type='button' id='jobDropdownMenu' data-toggle='dropdown' data-target='#jobDropdown' aria-haspopup='true' aria-expanded='false') Jobs
+            div(class='dropdown-menu' aria-labelledby='jobDropdown')
+              a(class='dropdown-item' href='/job/view') View Open Jobs
+      br
+      block body

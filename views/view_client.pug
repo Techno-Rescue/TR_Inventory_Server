@@ -1,0 +1,75 @@
+extends layout.pug
+append body
+  - var view = client
+  h3= view.name
+  div.clientInfoContainer
+    div.clientInfo
+      div.clientAddress
+        h5 Address
+        p= view.address
+        p= view.city
+        p= view.state
+        p= view.zip
+      div.clientContactInfo
+        h5 Contact Info
+        p= view.phone
+        p= view.email
+    div.clientInstructions
+      h5 Instructions
+      p= view.instructions
+  br
+  div.viewContacts
+    button(type='button' class='btn btn-secondary dropdown-toggle' data-toggle='collapse' data-target='#contacts') Contacts
+  div.addContact
+    form(action='/contact/', method='POST')
+      input(type='hidden', name='id' value=client.client_id)
+      input(class='btn btn-secondary' type='submit', value='Add Contact')
+  div(class='collapse' id='contacts')
+    each contact in view.contacts
+      h3 #{contact.contact_type}
+      div.contactContainer
+        h5= contact.name
+        div.contactInfo
+          p= contact.phone
+          p= contact.email
+        div.contactInstructions
+          p= contact.instructions
+    else
+      p No Contacts
+  br
+  div.viewJobs
+    button(type='button' class='btn btn-secondary dropdown-toggle' data-toggle='collapse' data-target='#jobs') Jobs
+  div.addJob
+    form(action='/job/add', method='POST')
+      input(type='hidden', name='jobId', value=client.client_id)
+      input(class='btn btn-secondary' type='submit', value='Add Job')
+  div(class='collapse' id='jobs')
+    each job in view.jobs
+      div.jobInfoContainer
+        div.jobInfo
+          h5 Invoice
+          p= job.invoice
+        div.jobInfo
+          h5 Type
+          p= job.job_type
+        div.jobInfo
+          h5 Disposition
+          p= job.equipment_disposition_type
+        div.jobInfo
+          h5 Date
+          p= job.date
+        div.jobInfo
+          h5 Driver
+          p= job.driver
+        div.jobInfo
+          h5 DD Type
+          p= job.dd_type
+        div.jobInfo
+          h5 Status
+          p= job.status
+        div.addJob
+          form(action='/job/edit/'+job.invoice, method='POST')
+            input(type='hidden', name='invoice' value=job.invoice)
+            input(class='btn btn-secondary' type='submit', value='Edit Job')
+    else
+      p No Jobs

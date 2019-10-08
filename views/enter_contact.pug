@@ -1,0 +1,25 @@
+extends layout.pug
+append body
+  div.enterContactContainer
+    - var setting1 = settings1;
+    form(action='/contact/add', method='POST')
+      div.input
+        input(type="hidden", name="id", value=clientId)
+        span.label Contact Type
+        select(name='type')
+          each value in setting1
+            option(value = value.setting_value) #{value.value}
+      div.input
+        span.label Contact Name
+        input(type="text", name="name")
+      div.input
+        span.label Contact Phone
+        input(type="text", name="phone")
+      div.input
+        span.label Contact Email
+        input(type="text", name="email") 
+      div.input
+        span.label Instructions
+        input(type="text", name="instructions")
+      div.actions
+        input(type="submit", value="Add Contact")
